@@ -6,8 +6,11 @@ class Animal < ActiveRecord::Base
   scope :meerkats, -> { where(race: 'Meerkat') }
   scope :wild_boars, -> { where(race: 'WildBoar') }
 
-
   def self.races
     %w(Lion WildBoar Meerkat)
+  end
+
+  def talk
+    raise 'Abstract Method'
   end
 end
