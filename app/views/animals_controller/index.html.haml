@@ -1,0 +1,19 @@
+%h1 The Lion Tribe
+%table
+  %thead
+    %tr
+      %th Name
+      %th Race
+      %th Age
+      %th
+      %th
+      %th
+  %tbody
+    - @animals.each do |animal|
+      %tr
+        %td= animal.name
+        %td= animal.race
+        %td= animal.age
+        %td= link_to 'Show', ""
+        %td= link_to 'Edit', ""
+        %td= link_to 'Destroy', "", method: :delete, data: { confirm: 'Are you sure?' }
